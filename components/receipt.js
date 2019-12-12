@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { find, range } from 'lodash'
+import Modal from './modal'
 
 const Keypad = ({ onSubmit, onExit }) => {
   const [number, setNumber] = useState('')
@@ -49,30 +50,12 @@ export default ({ text, onComplete }) => {
       // .then(json => alert(JSON.stringify(json)))
       .then(() => onComplete())
   return (
-    <article>
-      <h1>Send a receipt</h1>
+    <Modal heading="Get your receipt">
       <p>Phone number</p>
       <Keypad onSubmit={send} onExit={onComplete} />
       <p>Press "-" to cancel</p>
       <style jsx>{`
-        article {
-          width: 100%;
-          max-width: 64rem;
-          position: fixed;
-          background-color: #000;
-          padding: 3rem;
-          top: 25vh;
-          left: 10vw;
-          border: 0.5rem solid #fff;
-          box-shadow: 1rem 1rem 0 rgba(255, 255, 255, 0.5);
-        }
-        h1 {
-          margin-top: 0;
-          margin-bottom: 0;
-          font-size: 3rem;
-          color: #e42d42;
-        }
-        h1 + p {
+        p:first-of-type {
           font-size: 1.5rem;
           margin-bottom: 0;
         }
@@ -83,6 +66,6 @@ export default ({ text, onComplete }) => {
           margin-bottom: 0;
         }
       `}</style>
-    </article>
+    </Modal>
   )
 }
