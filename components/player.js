@@ -1,6 +1,6 @@
 export default ({ url }) => (
   <article>
-    <video muted autoPlay src={url} />
+    <video autoPlay src={url} />
     <style jsx>{`
       article {
         width: 100vw;
