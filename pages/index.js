@@ -18,18 +18,21 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_C.mp4?v=1576053922595',
+        duration: 12,
         receipt: 'Bottoms up!'
       },
       {
         name: 'matcha',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_Matcha.mp4?v=1576053925309',
+        duration: 12,
         receipt: 'I love you very matcha'
       },
       {
         name: 'fruit',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_Fruit.mp4?v=1576053923958',
+        duration: 10,
         receipt: 'Your efforts will bear fruit!'
       }
     ]
@@ -44,18 +47,21 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChips_C.mp4?v=1576053699764',
+        duration: 10,
         receipt: null
       },
       {
         name: 'nail',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChip_Nail.mp4?v=1576053698779',
+        duration: 10,
         receipt: 'u r gonna nail it'
       },
       {
         name: 'winter show',
         url:
           'https://d2wkqk610zk1ag.cloudfront.net/items/2R383w0M2q3p0J2f0r1B/Chip_Cushed%20By%20ITP%3AIMA.mp4',
+        duration: 14,
         receipt: 'Don’t let them crush you!'
       }
     ]
@@ -70,18 +76,21 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBars_C.mp4?v=1576053645242',
+        duration: 10,
         receipt: null
       },
       {
         name: 'sit-ups',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Situps.mp4?v=1576053642552',
+        duration: 15,
         receipt: 'It’s all gonna work out.'
       },
       {
         name: 'cheerleading',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Cheerleading.mp4?v=1576053639131',
+          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Cheerleading.mp4?v=1576352403678',
+        duration: 16,
         receipt: 'Cheer up!'
       }
     ]
@@ -94,15 +103,13 @@ export default () => {
 
   const onSelect = num => {
     if (Number(num) > products.length || Number(num) === 0) return
-    console.log(products, num)
     const product = find(products, ['num', Number(num)])
     const selected = sample(product.variants)
     setVariant(selected)
     setStage('variant')
-    // alert(capitalize(product.name))
     setTimeout(() => {
       setStage('confirm')
-    }, 8000)
+    }, selected.duration * 1000)
   }
 
   return (
