@@ -52,13 +52,12 @@ const Keypad = ({ onSelect }) => {
           user-select: none;
         }
         header {
-          // background-color: cyan;
           padding: 2rem 4rem 2rem 0;
           text-align: right;
           font-size: 4rem;
           line-height: 1;
           position: fixed;
-          top: 12vh;
+          top: 16vh;
           right: 0;
           width: 25vw;
         }
