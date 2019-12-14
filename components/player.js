@@ -3,7 +3,7 @@ export default ({ url }) => (
     <video autoPlay src={url} />
     <style jsx>{`
       article {
-        width: 100vw;
+        width: 90vw;
         height: 100vh;
         box-shadow: 0 0 0 100vh rgba(0, 0, 0, 1);
         position: fixed;

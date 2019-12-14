@@ -24,5 +24,8 @@ ${content}${dt.toLocaleString()}`
       const { date_sent, status } = message
       res.json({ date_sent, status, body })
     })
-    .catch(error => console.error(error))
+    .catch(error => {
+      console.error(error)
+      res.status(500).json({ error: error.message })
+    })
 }

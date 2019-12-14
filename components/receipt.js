@@ -29,7 +29,7 @@ const Keypad = ({ onSubmit, onExit }) => {
       <style jsx>{`
         aside {
           font-size: 2rem;
-          margin-bottom: 1rem
+          margin-bottom: 1rem;
         }
         header {
           background: #333;
@@ -49,11 +49,13 @@ export default ({ text, onComplete }) => {
     setSending(true)
     fetch(`/api/receipt?to=${number}&text=${encodeURIComponent(text)}`)
       .then(res => res.json())
-      // .then(json => alert(JSON.stringify(json)))
       .then(() => {
-      setSending(false)
-      onComplete()
-    })
+        setSending(false)
+        onComplete()
+      })
+      .catch(() => {
+        onComplete()
+      })
   }
   return (
     <Modal heading="Get your receipt">

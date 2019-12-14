@@ -47,7 +47,7 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChips_C.mp4?v=1576053699764',
-        duration: 10,
+        duration: 6,
         receipt: null
       },
       {
