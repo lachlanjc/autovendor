@@ -44,16 +44,22 @@ const Keypad = ({ onSubmit, onExit }) => {
 }
 
 export default ({ text, onComplete }) => {
-  const send = number =>
+  const [sending, setSending] = useState(false)
+  const send = number => {
+    setSending(true)
     fetch(`/api/receipt?to=${number}&text=${encodeURIComponent(text)}`)
       .then(res => res.json())
       // .then(json => alert(JSON.stringify(json)))
-      .then(() => onComplete())
+      .then(() => {
+      setSending(false)
+      onComplete()
+    })
+  }
   return (
     <Modal heading="Get your receipt">
       <p>Phone number</p>
       <Keypad onSubmit={send} onExit={onComplete} />
-      <p>Press "-" to cancel</p>
+      <p>{sending ? 'Sending…' : 'Press "-" to cancel'}</p>
       <style jsx>{`
         p:first-of-type {
           font-size: 1.5rem;

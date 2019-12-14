@@ -18,19 +18,19 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_C.mp4?v=1576053922595',
-        receipt: 'lklkfjasklf'
+        receipt: 'Bottoms up!'
       },
       {
         name: 'matcha',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_Matcha.mp4?v=1576053925309',
-        receipt: 'sfdsalkdfads'
+        receipt: 'I love you very matcha'
       },
       {
         name: 'fruit',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_Fruit.mp4?v=1576053923958',
-        receipt: 'sfdsalkdfads'
+        receipt: 'Your efforts will bear fruit!'
       }
     ]
   },
@@ -44,19 +44,19 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChips_C.mp4?v=1576053699764',
-        receipt: 'self-consmings chips'
+        receipt: null
       },
       {
         name: 'nail',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChip_Nail.mp4?v=1576053698779',
-        receipt: 'potatopoooo'
+        receipt: 'u r gonna nail it'
       },
       {
         name: 'winter show',
         url:
           'https://d2wkqk610zk1ag.cloudfront.net/items/2R383w0M2q3p0J2f0r1B/Chip_Cushed%20By%20ITP%3AIMA.mp4',
-        receipt: ''
+        receipt: 'Don’t let them crush you!'
       }
     ]
   },
@@ -70,19 +70,19 @@ const products = [
         name: 'self-consuming',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBars_C.mp4?v=1576053645242',
-        receipt: 'go eat it, barheads'
+        receipt: null
       },
       {
         name: 'sit-ups',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Situps.mp4?v=1576053642552',
-        receipt: 'choconononononooooo'
+        receipt: 'It’s all gonna work out.'
       },
       {
         name: 'cheerleading',
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Cheerleading.mp4?v=1576053639131',
-        receipt: ''
+        receipt: 'Cheer up!'
       }
     ]
   }
