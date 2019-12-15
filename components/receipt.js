@@ -5,7 +5,7 @@ const Keypad = ({ onSubmit, onExit }) => {
   const [number, setNumber] = useState('')
   const addNum = n =>
     setNumber(i => [i, Number(n)].join('').replace(/NaN/g, ''))
-  const backspace = () => setNumber(number.slice(0, number.length - 1))
+  const backspace = () => setNumber(n => n.slice(0, n.length - 1))
 
   const keyPressed = ({ key }) => {
     if (typeof Number(key) === 'number') addNum(key)
