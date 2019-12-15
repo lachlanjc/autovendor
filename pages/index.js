@@ -48,7 +48,7 @@ const products = [
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChips_C.mp4?v=1576053699764',
         duration: 6,
-        receipt: null
+        receipt: 'My pleasure!'
       },
       {
         name: 'nail',
@@ -77,7 +77,7 @@ const products = [
         url:
           'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBars_C.mp4?v=1576053645242',
         duration: 10,
-        receipt: null
+        receipt: 'Go beyond the BARicade!'
       },
       {
         name: 'sit-ups',
