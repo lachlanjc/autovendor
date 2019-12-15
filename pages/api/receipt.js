@@ -8,9 +8,9 @@ export default (req, res) => {
   console.log('SENDING', to, text)
   if (!to) res.status(422).json({ error: 'Missing to phone number' })
 
-  const dt = new Date()
-  dt.setTime(dt.getTime() + dt.getTimezoneOffset() * 60 * 1000)
-  const et = new Date(dt.getTime() + -300 * 60 * 1000)
+  let dt = new Date()
+  dt = dt.getTime() + dt.getTimezoneOffset() * 60000
+  const et = new Date(dt - 300 * 60 * 1000)
 
   const content = text
     ? `“${text}”
