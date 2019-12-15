@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { find, range } from 'lodash'
 import Modal from './modal'
 
 const Keypad = ({ onSubmit, onExit }) => {
   const [number, setNumber] = useState('')
   const addNum = n =>
     setNumber(i => [i, Number(n)].join('').replace(/NaN/g, ''))
-  const clear = () => setNumber('')
   const backspace = () => setNumber(number.slice(0, number.length - 1))
 
   const keyPressed = ({ key }) => {
@@ -47,6 +45,7 @@ export default ({ text, onComplete }) => {
   const [sending, setSending] = useState(false)
   const param = text ? `&text=${encodeURIComponent(text)}` : ''
   const send = number => {
+    if (number.length < 5) return
     setSending(true)
     fetch(`/api/receipt?to=${number}${param}`)
       .then(res => res.json())
