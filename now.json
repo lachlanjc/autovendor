@@ -2,5 +2,8 @@
   "version": 2,
   "name": "autovendor",
   "public": true,
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "env": {
+    "TWILIO_AUTH": "@twilio_auth"
+  }
 }
