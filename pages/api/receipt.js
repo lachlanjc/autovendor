@@ -1,7 +1,7 @@
-const twilio = require('twilio')(
-  'ACd2f0d2761422ef7e43d3de6a6a388e9f',
-  process.env.TWILIO_AUTH
-)
+// const twilio = require('twilio')(
+//   'ACd2f0d2761422ef7e43d3de6a6a388e9f',
+//   process.env.TWILIO_AUTH
+// )
 
 export default (req, res) => {
   const { to, text } = req.query
