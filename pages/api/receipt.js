@@ -8,16 +8,12 @@ export default (req, res) => {
   console.log('SENDING', to, text)
   if (!to) res.status(422).json({ error: 'Missing to phone number' })
 
-  let dt = new Date()
-  dt = dt.getTime() + dt.getTimezoneOffset() * 60000
-  const et = new Date(dt - 300 * 60 * 1000)
-
   const content = text
     ? `“${text}”
 `
     : ''
   const body = `AUTOVENDOR @ NYU IMA
-${content}${et.toLocaleString()}`
+${content}Dec 15, 2019`
 
   twilio.messages
     .create({ body, to: `+1${to}`, from: '+18649736177' })
