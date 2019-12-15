@@ -4,17 +4,16 @@ const twilio = require('twilio')(
 )
 
 export default (req, res) => {
-  const { to, text = 'Testing receipts' } = req.query
+  const { to, text } = req.query
   console.log('SENDING', to, text)
   if (!to) res.status(422).json({ error: 'Missing to phone number' })
   const dt = new Date()
   dt.setMinutes(dt.getMinutes() + dt.getTimezoneOffset() - 300)
 
-  const content =
-    text === 'null'
-      ? ''
-      : `“${text}”
+  const content = text
+    ? `“${text}”
 `
+    : ''
   const body = `AUTOVENDOR @ NYU IMA
 ${content}${dt.toLocaleString()}`
 
@@ -26,6 +25,6 @@ ${content}${dt.toLocaleString()}`
     })
     .catch(error => {
       console.error(error)
-      res.status(500).json({ error: error.message })
+      res.status(422).json({ error: error.message })
     })
 }

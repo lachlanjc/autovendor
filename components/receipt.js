@@ -45,9 +45,10 @@ const Keypad = ({ onSubmit, onExit }) => {
 
 export default ({ text, onComplete }) => {
   const [sending, setSending] = useState(false)
+  const param = text ? `&text=${encodeURIComponent(text)}` : ''
   const send = number => {
     setSending(true)
-    fetch(`/api/receipt?to=${number}&text=${encodeURIComponent(text)}`)
+    fetch(`/api/receipt?to=${number}${param}`)
       .then(res => res.json())
       .then(() => {
         setSending(false)
