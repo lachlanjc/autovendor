@@ -17,21 +17,21 @@ const products = [
       {
         name: 'self-consuming',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_C.mp4?v=1576053922595',
+          '/Coffee_C.mp4?v=1576053922595',
         duration: 12,
         receipt: 'Bottoms up!'
       },
       {
         name: 'matcha',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_Matcha.mp4?v=1576053925309',
+          '/Coffee_Matcha.mp4?v=1576053925309',
         duration: 12,
         receipt: 'I love you very matcha'
       },
       {
         name: 'fruit',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FCoffee_Fruit.mp4?v=1576053923958',
+          '/Coffee_Fruit.mp4?v=1576053923958',
         duration: 10,
         receipt: 'Your efforts will bear fruit!'
       }
@@ -46,14 +46,14 @@ const products = [
       {
         name: 'self-consuming',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChips_C.mp4?v=1576053699764',
+          '/Chips_C.mp4?v=1576053699764',
         duration: 6,
         receipt: 'My pleasure!'
       },
       {
         name: 'nail',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FChip_Nail.mp4?v=1576053698779',
+          '/Chip_Nail.mp4?v=1576053698779',
         duration: 10,
         receipt: 'u r gonna nail it'
       },
@@ -75,21 +75,21 @@ const products = [
       {
         name: 'self-consuming',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBars_C.mp4?v=1576053645242',
+          '/Bars_C.mp4?v=1576053645242',
         duration: 10,
         receipt: 'Go beyond the BARicade!'
       },
       {
         name: 'sit-ups',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Situps.mp4?v=1576053642552',
+          '/Bar_Situps.mp4?v=1576053642552',
         duration: 15,
         receipt: 'It’s all gonna work out.'
       },
       {
         name: 'cheerleading',
         url:
-          'https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FBar_Cheerleading.mp4?v=1576352403678',
+          '/Bar_Cheerleading.mp4?v=1576352403678',
         duration: 16,
         receipt: 'Cheer up!'
       }
@@ -120,7 +120,7 @@ export default () => {
           @font-face {
             font-family: 'Press Start';
             font-weight: 400;
-            src: url('https://cdn.glitch.com/852bc403-854b-4211-8864-b85747c19f7f%2FPressStart2P.ttf?v=1575689646385')
+            src: url('/PressStart2P.ttf?v=1575689646385')
               format('truetype');
             font-display: swap;
           }
